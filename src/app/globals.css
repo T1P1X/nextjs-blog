@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #5f5173;
+  color: white;
+}
+
+.main{
+  width: 50%;
+  margin: auto;
+  padding-top: 30px;
+}
