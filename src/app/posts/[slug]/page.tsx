@@ -1,6 +1,8 @@
 // app/posts/[slug]/page.tsx
 import { format, parseISO } from 'date-fns'
 import { allPosts } from 'contentlayer/generated'
+import Navbar from '@/components/navBar'
+import Image from 'next/image'
 
 export const generateStaticParams = async () => allPosts.map((post) => ({ slug: post._raw.flattenedPath }))
 
@@ -20,11 +22,17 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
         <time dateTime={post.date} className="mb-1 text-xs text-gray-600">
           {format(parseISO(post.date), 'LLLL d, yyyy')}
         </time>
+        <Image 
+          src={post.image}
+          width={500}
+          height={500}
+          alt="Picture of developer"
+        />
+        <br />
         <h1 className="text-3xl font-bold">{post.title}</h1>
       </div>
       <div className="[&>*]:mb-3 [&>*:last-child]:mb-0" dangerouslySetInnerHTML={{ __html: post.body.html }} />
     </article>
   )
 }
-
 export default PostLayout

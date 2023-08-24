@@ -1,6 +1,7 @@
 ---
 title: 'Unlocking the Power of Python: A Versatile and Essential Programming Language'
 date: 2022-06-28
+image: '/python.png'
 ---
 
 ## Embracing the Pythonic Way

@@ -1,6 +1,7 @@
 ---
 title: Astro in brief
 date: 2022-06-22
+image: '/developer.jpg'
 ---
 
 # First title
